@@ -1,9 +1,15 @@
 package es.iesmz.ed.algoritmes;
-
+/**
+ * Esta clase realiza los test para las comprobaciones de que el metodo en cuestion funciona
+ * */
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SumaDescendentTest {
+    /**
+     * Esto es un test que crea un objeto suma pasandole un valor y
+     * luego usando el asserst para ver si nos devuelve el valor esperado usando el metodo
+     * */
     @Test
     public void testSumaDescendent() {
         SumaDescendent suma = new SumaDescendent(4578);

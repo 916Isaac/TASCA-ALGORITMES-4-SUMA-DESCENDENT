@@ -13,7 +13,9 @@ public class SumaDescendent {
     public SumaDescendent(long numero) {
         this.numero = numero;
     }
-
+    /**
+     * Este metodo obtiene la suma de todos los digitos del numero EJ: 31314 = 31314 + 1314 + 314 + 14 + 4 = 32.960
+     * */
     public long suma() {
         long resultado = 0;
 

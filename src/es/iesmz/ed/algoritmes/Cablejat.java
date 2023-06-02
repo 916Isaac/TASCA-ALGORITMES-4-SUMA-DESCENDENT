@@ -16,14 +16,18 @@ public class Cablejat {
     public Cablejat(String[] conectores) {
         this.conector = conectores;
     }
-
+    /**
+     * Este metodo se encarga de ver si se pueden conectar todos los conectores
+     * */
     public boolean esPotConnectar() {
         List<String> availableConnectors = new ArrayList<>();
         availableConnectors.addAll(Arrays.asList(conector));
 
         return connectCables(availableConnectors, availableConnectors.get(0), 1);
     }
-
+    /**
+     * Metodo para ver si es posible conectar los cables de una lista de conectores en un orden determinado
+     * */
     private boolean connectCables(List<String> conectoresValidos, String conectorActual, int cont) {
         if (cont == conector.length) {
             return canConnect(conectorActual, conectoresValidos.get(0));
@@ -42,7 +46,9 @@ public class Cablejat {
 
         return false;
     }
-
+    /**
+     *metodo que devuelve el boolean para verificar si han conectado
+     **/
     private boolean canConnect(String con1, String con2) {
         char resultado1 = con1.charAt(1);
         char resultado2 = con2.charAt(0);
